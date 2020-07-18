@@ -1,7 +1,7 @@
 <style>
 #txthrg_sat{border:0 solid transparent;background:transparent;}
 </style>
-<script type="text/javascript">
+<script>
 window.onload = function() {
   var intNum = document.getElementById("intNum");
   for (var i = 1; i <= 3000; i++) {
@@ -17,8 +17,9 @@ function jml_total() {
   var jml_pilih = parseInt(document.getElementById("intNum").value);
   var int_hitung = hrg_sat * jml_pilih;
   document.getElementById("intTotal").innerHTML = int_hitung;
-}
+}	
 </script>
+<div id="hrg_sat">3000</div>
 <select id="intNum" onChange="jml_total(this.value)">
   <option value="" disabled selected>Pilih Jumlah ... </option>
 </select>
