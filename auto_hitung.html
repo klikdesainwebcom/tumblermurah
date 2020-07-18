@@ -13,10 +13,10 @@ window.onload = function() {
 };
 
 function jml_total() {
-  var hrg_sat = parseInt(document.querySelector("hrg_sat").innerHTML);
+  var hrg_sat = parseInt(document.querySelector("#hrg_sat").innerHTML);
   var jml_pilih = parseInt(document.getElementById("intNum").value);
   var int_hitung = hrg_sat * jml_pilih;
-  document.getElementById("intTotal").value = int_hitung;
+  document.getElementById("intTotal").innerHTML = int_hitung;
 }
 </script>
 <div id="hrg_sat">3000</div>
