@@ -1,0 +1,27 @@
+<style>
+#txthrg_sat{border:0 solid transparent;background:transparent;}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+  var intNum = document.getElementById("intNum");
+  for (var i = 1; i <= 3000; i++) {
+    var option = document.createElement("option");
+    option.innerHTML = i;
+    option.value = i;
+    intNum.appendChild(option);
+  }
+};
+
+function jml_total() {
+  var hrg_sat = parseInt(document.querySelector("hrg_sat").innerHTML);
+  var jml_pilih = parseInt(document.getElementById("intNum").value);
+  var int_hitung = hrg_sat * jml_pilih;
+  document.getElementById("intTotal").value = int_hitung;
+}
+</script>
+<div id="hrg_sat">3000</div>
+<select id="intNum" onChange="jml_total(this.value)">
+  <option value="" disabled selected>Pilih Jumlah ... </option>
+</select>
+<br />
+<div id="intTotal"></div>
